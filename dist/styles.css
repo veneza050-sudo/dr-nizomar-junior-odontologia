@@ -81,11 +81,13 @@ h1 { max-width: 690px; margin-bottom: 28px; font-size: clamp(44px, 5vw, 72px); l
 .intro-copy p { max-width: 570px; }
 .intro-copy .large-copy { color: var(--graphite); font-family: Georgia, serif; font-size: 23px; line-height: 1.55; }
 .profile-card { display: grid; grid-template-columns: .84fr 1.16fr; min-height: 520px; background: var(--ice); }
-.profile-photo { min-height: 520px; overflow: hidden; }
-.profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; filter: saturate(.86); }
+.profile-photo { min-height: 520px; background: var(--white); border: 1px solid var(--border); border-right: 0; }
 .profile-content { display: flex; flex-direction: column; justify-content: center; padding: clamp(45px, 7vw, 90px); }
 .mini-label { color: var(--blue); font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
-.profile-statement { margin: 25px 0 38px; max-width: 620px; font-size: clamp(30px, 3vw, 42px); line-height: 1.25; }
+.profile-statement { margin: 25px 0 22px; max-width: 650px; font-size: clamp(28px, 2.7vw, 39px); line-height: 1.24; }
+.profile-description { max-width: 660px; margin-bottom: 30px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.profile-description p { margin-bottom: 12px; }
+.profile-description p:last-child { margin-bottom: 0; }
 .credential-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; padding-top: 28px; border-top: 1px solid var(--border); }
 .credential-list > div { display: flex; gap: 12px; }
 .credential-list svg { flex: 0 0 21px; width: 21px; color: var(--blue); }
@@ -194,6 +196,7 @@ h1 { max-width: 690px; margin-bottom: 28px; font-size: clamp(44px, 5vw, 72px); l
   .section-heading h2, .clinic-copy h2, .journey-heading h2, .contact h2 { font-size: 40px; }
   .profile-card { width: 100%; grid-template-columns: 1fr; }
   .profile-photo { min-height: 390px; max-height: 480px; }
+  .profile-photo { border-right: 1px solid var(--border); border-bottom: 0; }
   .profile-content { padding: 38px 25px; }
   .profile-statement { font-size: 30px; }
   .services-grid { grid-template-columns: 1fr; }
