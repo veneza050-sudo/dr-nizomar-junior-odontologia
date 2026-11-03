@@ -39,3 +39,18 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
 }
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+const glowCards = document.querySelectorAll('[data-glow-card]');
+
+glowCards.forEach((card) => {
+  card.addEventListener('pointermove', (event) => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--glow-x', `${event.clientX - rect.left}px`);
+    card.style.setProperty('--glow-y', `${event.clientY - rect.top}px`);
+  });
+
+  card.addEventListener('pointerleave', () => {
+    card.style.setProperty('--glow-x', '50%');
+    card.style.setProperty('--glow-y', '50%');
+  });
+});
